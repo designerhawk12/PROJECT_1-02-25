@@ -34,53 +34,20 @@ nav {
 
 /* Header */
 header {
-    padding: 1rem;
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    background: url('construction.jpg') center/cover no-repeat;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0.7) 80%),
+    url('images/construction.jpg') center/cover no-repeat;
+
 }
 
-/* Header with Background Image */
-header {
-    position: relative;
-    padding: 1rem;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    background: url('construction.jpg') center/cover no-repeat;
-    overflow: hidden; /* Ensure the overlay doesn't overflow */
-}
-
-/* Dark Overlay */
-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
-    z-index: -1; /* Place it behind the content */
-    animation: fadeIn 3s ease-in-out forwards; /* Fade-in animation */
-}
-
-/* Fade-In Animation */
-@keyframes fadeIn {
-    0% {
-        background: rgba(0, 0, 0, 0.7); /* Start with a dark overlay */
-    }
-    100% {
-        background: rgba(0, 0, 0, 0.3); /* End with a lighter overlay */
-    }
-}
-
-/* Ensure the header content is above the overlay */
-header h1,
-header nav ul,
-header .auth-buttons {
-    position: relative;
-    z-index: 1;
+header h1 {
+    display: inline-block;
+    font-size: 1.8rem;
+    margin-right: 1rem;
+    font-weight: 600;
+    color: #fff;
 }
 
 header nav ul {
@@ -89,12 +56,7 @@ header nav ul {
     justify-content: space-between;
     gap: 1.5rem;
 }
-header h1{
-    margin-right: 16px;
-    font-size: 1.8rem;
-    color: #fff;
-    font-weight: 700;
-}
+
 header nav ul li a {
     color: #fff;
     text-decoration: none;
@@ -125,7 +87,7 @@ header nav ul li a:hover {
 }
 
 .hero p {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     margin-bottom: 1.5rem;
     color: #ddd;
 }
